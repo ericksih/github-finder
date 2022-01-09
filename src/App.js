@@ -6,9 +6,9 @@ import User from './components/users/User';
 import Alert from './components/layout/Alert';
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
-import About from './pages/About';
+import About from './pages/about/About';
 import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import NotFound from './pages/notFound/NotFound';
 
 const App = () => {
   return (

@@ -8,7 +8,6 @@ const User = ({ match }) => {
   const githubContext = useContext(GithubContext);
 
   const { getUser, loading, user, repos, getUserRepos } = githubContext;
-  console.log(user);
 
   useEffect(() => {
     getUser(match.params.login);
