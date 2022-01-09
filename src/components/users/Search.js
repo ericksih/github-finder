@@ -34,7 +34,6 @@ const Search = () => {
         />
         <input type='submit' className='btn btn-dark btn-block' />
       </form>
-
       {githubContext.users.length > 0 && (
         <button
           className='btn btn-light btn-block'

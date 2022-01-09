@@ -13,7 +13,7 @@ const Users = () => {
   }
 
   if (users.length === 0) {
-    return <h2 style={{ textAlign: 'center' }}>No users found</h2>;
+    return <h2 style={{ textAlign: 'center' }}> No users found</h2>;
   }
 
   return (

@@ -8,6 +8,7 @@ const User = ({ match }) => {
   const githubContext = useContext(GithubContext);
 
   const { getUser, loading, user, repos, getUserRepos } = githubContext;
+  console.log(user);
 
   useEffect(() => {
     getUser(match.params.login);
@@ -29,22 +30,23 @@ const User = ({ match }) => {
     public_repos,
     public_gists,
     hireable,
+    id,
   } = user;
 
   if (loading) return <Spinner />;
 
   return (
     <Fragment>
-      <Link to='/' className='btn btn-light'>
+      <Link to='/' className='btn btn-dark'>
         Back to Search
       </Link>
-      Hireable:
+      Hireable : {''}
       {hireable ? (
         <i className='fas fa-check text-success' />
       ) : (
         <i className='fas fa-times-circle text-danger' />
       )}
-      <div className='card grid-2'>
+      <div className='card grid-2 profile'>
         <div className='all-center'>
           <img
             src={avatar_url}
@@ -53,6 +55,7 @@ const User = ({ match }) => {
             style={{ width: '150px' }}
           />
           <h1>{name}</h1>
+          <h5> User ID : {id}</h5>
           <p> Location : {location} </p>
         </div>
         <div>
@@ -62,28 +65,34 @@ const User = ({ match }) => {
               <p>{bio}</p>
             </Fragment>
           )}
-          <a href={html_url} className='btn btn-dark my-1'>
+
+          <a
+            href={html_url}
+            target={'_blank'}
+            rel='noreferrer'
+            className='btn btn-dark my-1'
+          >
             Visit Github Profile
           </a>
           <ul>
             <li>
               {login && (
                 <Fragment>
-                  <strong> Username: </strong> {login}
+                  <strong> Username : </strong> {login}
                 </Fragment>
               )}
             </li>
             <li>
               {company && (
                 <Fragment>
-                  <strong> Company: </strong> {company}
+                  <strong> Company : </strong> {company}
                 </Fragment>
               )}
             </li>
             <li>
               {blog && (
                 <Fragment>
-                  <strong> Website: </strong> {blog}
+                  <strong> Website : </strong> {blog}
                 </Fragment>
               )}
             </li>
