@@ -33,7 +33,7 @@ const About = () => {
           </li>
           <li>
             <i className='fab fa-linkedin'>
-              <a href='https://twitter.com/'> Linked-In </a>
+              <a href='https://www.linkedin.com/'> Linked-In </a>
             </i>
           </li>
         </ul>
