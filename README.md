@@ -2,8 +2,6 @@
 
 ## NOTES 📝
 
-- Style for Mobile still ongoing . . .
+- Live on https://yaudah-githubfinder.herokuapp.com/
 
-#### Todo 
-- Responsive Web
-- Deploy on server
+
