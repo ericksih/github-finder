@@ -33,7 +33,7 @@ const GithubState = (props) => {
           payload: res.data,
         });
       })
-      .catch((err) => console.log('napa nih?', err));
+      .catch((err) => console.log(err));
   }, []);
 
   // Search Users
